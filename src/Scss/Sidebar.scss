@@ -1,0 +1,155 @@
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 55px;
+  left: 0;
+  overflow: hidden;
+
+  .sidebarContainer {
+    width: 92%;
+    height: 100%;
+    padding: 15px 8px;
+    overflow-y: scroll;
+    padding-right: 0px;
+    padding-bottom: 30px;
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 25px;
+      transition: 0.2s;
+    }
+    &:hover::-webkit-scrollbar-thumb {
+      background: #b4b4b4;
+    }
+
+    .sidebarMenu {
+      height: 74%;
+      padding-bottom: 10px;
+      overflow-y: hidden;
+      position: relative;
+      a {
+        padding: 6px 7px 6px 5px;
+        text-decoration: none;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        &:hover {
+          background: $hoverBackground;
+          border-radius: 10px 0px 0px 10px;
+        }
+        img {
+          width: 33px;
+          transform: scale(0.8);
+          aspect-ratio: 1;
+          object-fit: cover;
+        }
+        .profile {
+          width: 33px;
+          border-radius: 50%;
+          aspect-ratio: 1;
+          object-fit: cover;
+        }
+
+        span {
+          margin-left: 8px;
+          color: rgb(77, 77, 77);
+          font-weight: 500;
+          font-size: 15px;
+        }
+
+        i {
+          background-size: auto;
+          width: 34px;
+          height: 34px;
+          background-repeat: no-repeat;
+          display: inline-block;
+          transform: scale(0.8);
+        }
+        .linkicon {
+          background-size: auto;
+          width: 34px;
+          height: 30px;
+          background-repeat: no-repeat;
+          display: inline-block;
+          transform: scale(0.8);
+        }
+      }
+
+      border-bottom: 0.5px solid #ced0d4;
+      .showmore {
+       
+        .showmoreIcon {
+          width: 30px;
+          aspect-ratio: 1;
+          background: $hoverBackground;
+          border-radius: 50%;
+          text-align: center;
+          display: grid;
+          place-content: center;
+          color: $textblack;
+        }
+      }
+      .showmoreActive {
+        position: absolute;
+        bottom: 0px;
+        background: #f1f2f6;
+        width: 100%;
+        left: 0;
+      }
+    }
+    .fullmenu {
+      height: auto;
+      padding-bottom: 10px;
+    }
+    .shortCurts {
+      padding-bottom: 30px;
+      padding-left: 10px;
+      h3 {
+        padding: 15px 0px;
+        padding-bottom: 0px;
+        font-size: 17px;
+        color: $textlightblack;
+        font-weight: 500;
+      }
+      a {
+        padding: 8px 0px;
+        text-decoration: none;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        &:hover {
+          background: $hoverBackground;
+          border-radius: 10px 0px 0px 10px;
+        }
+        img {
+          width: 30px;
+          aspect-ratio: 1;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+        .circle {
+          border-radius: 50%;
+        }
+        span {
+          margin-left: 8px;
+          color: $textblack;
+          font-weight: 500;
+          font-size: 15px;
+        }
+      }
+      .sidebarFooter {
+        font-size: 14px;
+        font-weight: 400px;
+        color: $textlightblack;
+        line-height: 15px !important;
+        display: inline-block;
+        padding: 10px 0px;
+      }
+    }
+  }
+}

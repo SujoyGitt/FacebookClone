@@ -1,0 +1,382 @@
+nav {
+  width: 100%;
+  height: 55px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: $white;
+  box-shadow: 0px 0px 4px 2px #94949441;
+  z-index: 5;
+  .logoWithSearch {
+    width: 25%;
+    height: 100%;
+    .logo {
+      width: 58px;
+      height: 58px;
+      margin-left: 8px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .searchBar {
+      background: $lightwhite;
+      padding: 8px 15px 8px 12px;
+      border-radius: 25px;
+      svg {
+        color: $textlightblack;
+      }
+      input {
+        border: none;
+        outline: none;
+        background: none;
+        margin-left: 5px;
+        &:placeholder-shown {
+          color: #747579;
+          font-size: 15px;
+          padding-left: 3px;
+        }
+      }
+    }
+    .Icon {
+      width: 50px;
+      height: 90%;
+      line-height: 65px;
+      text-align: center;
+      margin-left: 10px;
+      svg {
+        color: $textlightblack;
+        opacity: 0.9;
+      }
+      &:is(:hover, .activate) svg {
+        color: $textblue;
+        opacity: 1;
+      }
+      &:hover {
+        border-radius: 10px;
+        background: $hoverBackground;
+      }
+      &:is(.activate) {
+        height: 100%;
+        line-height: 65px;
+        border-bottom: 3px solid $textblue;
+        border-radius: 0px;
+        background: none;
+      }
+    }
+    .searchBox {
+      position: absolute;
+      width: 320px;
+      height: 480px;
+      overflow-y: hidden;
+      top: 3px;
+      left: 0px;
+      padding: 8px 18px;
+      background: white;
+      border-radius: 7px;
+      box-shadow: 0 12px 18px 0 var(--shadow-2);
+      z-index: 3;
+      .searchBar {
+        background: $lightwhite;
+        border-radius: 25px;
+        width: 87%;
+        svg {
+          color: $textlightblack;
+        }
+        input {
+          border: none;
+          outline: none;
+          background: none;
+          margin-left: 5px;
+          &:placeholder-shown {
+            color: #747579;
+            font-size: 15px;
+            padding-left: 3px;
+          }
+        }
+      }
+      .searchUserData {
+        .searchName {
+          padding: 5px;
+          text-decoration: none;
+          display: block;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          &:hover {
+            background: $hoverBackground;
+            border-radius: 10px 0px 0px 10px;
+          }
+          img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+          }
+          span {
+            color: $textlightblack;
+            font-weight: 400;
+            font-size: 15px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+  .NavbarMenu {
+    width: 45%;
+    height: 100%;
+    margin: 4px 0px;
+    .Icon {
+      width: 18%;
+      height: 90%;
+      text-align: center;
+      line-height: 65px;
+      margin: 2px 0px;
+      svg {
+        color: $textlightblack;
+        opacity: 0.9;
+      }
+      &:is(:hover) img {
+        filter: invert(18%) sepia(80%) saturate(1400%) hue-rotate(900deg)
+          brightness(200%) contrast(90%);
+        opacity: 1;
+      }
+      &:is(:hover) svg {
+        color: $textblue;
+        opacity: 1;
+      }
+      &:hover {
+        border-radius: 10px;
+        background: #e9eaed;
+      }
+    }
+    .activate {
+      height: 100%;
+      line-height: 70px;
+      border-bottom: 3px solid $textblue;
+      border-radius: 0px;
+      background: none;
+      &:hover {
+        border-radius: 0px;
+        background: none;
+      }
+      img {
+        filter: invert(18%) sepia(80%) saturate(1400%) hue-rotate(900deg)
+          brightness(200%) contrast(90%);
+        opacity: 1;
+      }
+      svg {
+        color: $textblue;
+        opacity: 1;
+      }
+    }
+  }
+  .notificationIcon {
+    width: 25%;
+    padding-right: 8px;
+    position: relative;
+    .allNotificationIcons {
+      .nIcon {
+        width: 40px;
+        height: 40px;
+        background: #e7e6ec;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        display: inline-block;
+        color: $textblack;
+        margin-right: 8px;
+        img {
+          object-fit: cover;
+          border-radius: 50%;
+          top: 0;
+          left: 0;
+        }
+      }
+      .activateicon {
+        background: #e5f1fd;
+        svg {
+          color: $textblue;
+        }
+      }
+    }
+    .notificationBox,
+    .chatBox {
+      position: absolute;
+      top: 45px;
+      right: 15px;
+      padding: 15px;
+      background: white;
+      width: 340px;
+      height: 90vh;
+      border-radius: 10px;
+      box-shadow: 0 0px 18px 0 var(--shadow-2);
+      overflow-y: scroll;
+      z-index: 3;
+      .friends {
+        margin-top: 10px;
+        a {
+          span {
+            display: block;
+          }
+        }
+      }
+      .notificationHeader {
+        h4 {
+          font-weight: 700;
+        }
+        .Icon {
+          opacity: 0.6;
+        }
+      }
+
+      a {
+        padding: 8px 0px 8px 8px;
+        text-decoration: none;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        img {
+          border-radius: 50%;
+          margin-right: 12px;
+        }
+        &:hover {
+          background: $hoverBackground;
+          border-radius: 10px;
+        }
+        span {
+          color: $textlightblack;
+          font-size: 14px;
+          line-height: 15px;
+        }
+      }
+      .logoWithSearch {
+        width: 100% !important;
+        height: auto !important;
+        padding: 0px !important;
+        .searchBar {
+          width: 100%;
+          background: $lightwhite;
+          padding: 8px 15px 8px 12px;
+          border-radius: 25px;
+          svg {
+            color: $textlightblack;
+          }
+          input {
+            border: none;
+            outline: none;
+            background: none;
+            margin-left: 5px;
+            &:placeholder-shown {
+              color: #747579;
+              font-size: 15px;
+              padding-left: 3px;
+            }
+          }
+        }
+        .Icon {
+          width: 50px;
+          height: 90%;
+          line-height: 65px;
+          text-align: center;
+          margin-left: 10px;
+          svg {
+            color: $textlightblack;
+            opacity: 0.9;
+          }
+          &:is(:hover, .activate) svg {
+            color: $textblue;
+            opacity: 1;
+          }
+          &:hover {
+            border-radius: 10px;
+            background: $hoverBackground;
+          }
+          &:is(.activate) {
+            height: 100%;
+            line-height: 65px;
+            border-bottom: 3px solid $textblue;
+            border-radius: 0px;
+            background: none;
+          }
+        }
+      }
+      .chatBtnGroup {
+        margin-top: 10px;
+        .chatBtn {
+          padding-right: 10px;
+          color: black;
+          margin-left: 10px;
+        }
+        .inbox {
+          background: #e5f1fd;
+          color: $textblue;
+          border-radius: 10px;
+        }
+      }
+    }
+    .notificationBox {
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 25px;
+        transition: 0.2s;
+      }
+      &:hover::-webkit-scrollbar-thumb {
+        background: #b4b4b4;
+      }
+    }
+  }
+}
+
+@media (max-width:767px) {
+  nav{
+    .notificationIcon{
+      .notificationBox,
+      .chatBox {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 15px;
+        background: white;
+        width: 200%;
+        height: 100vh;
+        border-radius: 10px;
+        box-shadow: 0 0px 18px 0 var(--shadow-2);
+        overflow-y: scroll;
+        z-index: 3;
+      }
+    }
+  }
+}
+@media (max-width: 1204px) {
+  .logoWithSearch {
+    width: 25%;
+  }
+  .searchBar {
+    padding: 12px !important;
+    border-radius: 50%;
+
+    input {
+      display: none;
+    }
+  }
+  .searchBox {
+    .searchBar {
+      padding: 8px !important;
+      input {
+        display: block !important;
+      }
+    }
+  }
+  .NavbarMenu {
+    .Icon {
+      width: 20%;
+    }
+  }
+}

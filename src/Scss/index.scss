@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Gudea&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:ital,wght@1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  font-style: normal;
+  overflow-x: hidden;
+  background: #f0f2f5;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+#root {
+  width: 100%;
+  min-height: 100vh;
+ 
+}
+$white: #ffffff;
+$lightwhite: #f0f2f5;
+$textblack: #535353;
+$textlightblack: #64666b;
+$textblue: #1b74e4;
+$hoverBackground: #e9eaed;
+:root {
+  --shadow-1: rgba(0, 0, 0, 0.1);
+  --shadow-2: rgba(0, 0, 0, 0.2);
+}
+svg,i{
+  cursor: pointer;
+}
+@import "./Navbar.scss";
+@import "./CreatePost.scss";
+@import "./Homescreen.scss";
+@import "./Marketplace.scss";
+@import "./Posts.scss";
+@import "./Sidebar.scss";
+@import "./sidebarRight.scss";
+@import "./Stories.scss";
+@import "./video.scss";
+@import "./Bookmarks.scss";
+@import "./ProfilePage.scss";
+@import "./ShowChat.scss"

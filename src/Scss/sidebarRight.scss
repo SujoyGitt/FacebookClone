@@ -1,0 +1,204 @@
+.sidebarRight {
+  overflow-y: hidden;
+  position: fixed;
+  top: 55px;
+  right: 0;
+  height: 100vh;
+
+  .rightSidebarcontainer {
+    margin-left: auto;
+    width: 90%;
+    height: 100%;
+    padding: 10px 8px;
+    overflow-y: scroll;
+    padding-left: 0px;
+    padding-bottom: 30px;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 25px;
+      transition: 0.2s;
+    }
+    &:hover::-webkit-scrollbar-thumb {
+      background: #b4b4b4;
+    }
+    .rightsidebarAdds {
+      padding-bottom: 10px;
+      overflow: hidden;
+      position: relative;
+      > h3 {
+        padding: 15px 0px;
+        padding-bottom: 0px;
+        font-size: 17px;
+        color: $textlightblack;
+        margin-left: 10px;
+        font-weight: 500;
+      }
+      a {
+        padding: 8px 0px 8px 8px;
+        text-decoration: none;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        &:hover {
+          background: $hoverBackground;
+          border-radius: 10px 0px 0px 10px;
+        }
+        img {
+          width: 110px;
+          aspect-ratio: 1;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+        span {
+          color: $textlightblack;
+          font-weight: 400;
+          font-size: 14px;
+          word-wrap: break-word;
+          margin-left: 10px;
+          white-space: pre-wrap;
+        }
+        .addDescription {
+          span {
+            line-height: 14px;
+          }
+          > p {
+            color: $textblack;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 0;
+            margin: 0;
+            margin-left: 10px;
+          }
+        }
+      }
+      border-bottom: 0.5px solid #ced0d4;
+    }
+    .rightsidebarPage {
+      > h3 {
+        padding: 12px 0px;
+        padding-bottom: 0px;
+        font-size: 17px;
+        color: $textlightblack;
+        font-weight: 500;
+      }
+      a {
+        padding: 8px 0px;
+        margin-left: 10px;
+        text-decoration: none;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .switchIcon {
+          background-size: auto;
+          width: 20px;
+          height: 20px;
+          background-repeat: no-repeat;
+          display: inline-block;
+        }
+        &:hover {
+          background: $hoverBackground;
+          border-radius: 10px 0px 0px 10px;
+        }
+        img {
+          width: 30px;
+          aspect-ratio: 1;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+        .circle {
+          border-radius: 50%;
+        }
+        span {
+          margin-left: 8px;
+          color: $textblack;
+          font-weight: 500;
+          font-size: 15px;
+        }
+      }
+
+      border-bottom: 0.5px solid #ced0d4;
+    }
+    .rightsidebarBirthday {
+      padding-bottom: 10px;
+      > h3 {
+        padding: 12px 0px;
+        padding-bottom: 0px;
+        font-size: 17px;
+        color: $textlightblack;
+        font-weight: 500;
+      }
+      a {
+        padding: 8px 0px 8px 8px;
+        text-decoration: none;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        &:hover {
+          background: $hoverBackground;
+          border-radius: 10px 0px 0px 10px;
+        }
+        span {
+          color: $textlightblack;
+          font-weight: 400;
+          font-size: 15px;
+          margin-left: 10px;
+        
+        }
+      }
+      border-bottom: 0.5px solid #ced0d4;
+    }
+    .rightsidebarContact {
+      > h3 {
+        padding: 12px 0px;
+        padding-bottom: 0px;
+        font-size: 17px;
+        color: $textlightblack;
+        font-weight: 500;
+      }
+      a {
+        padding: 8px 0px;
+        margin-left: 10px;
+        text-decoration: none;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        &:hover {
+          background: $hoverBackground;
+          border-radius: 10px 0px 0px 10px;
+        }
+        img {
+          width: 30px;
+          position: relative;
+          aspect-ratio: 1;
+          object-fit: cover;
+          border-radius: 50%;
+          &::after{
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: limegreen;
+            border-radius: 50%;
+            position: absolute;
+            top: 80%;
+            left:  80%;
+          }
+        }
+        span {
+          margin-left: 8px;
+          color: $textblack;
+          font-weight: 500;
+          font-size: 15px;
+        }
+       
+      }
+    }
+  }
+}

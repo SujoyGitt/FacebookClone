@@ -1,0 +1,176 @@
+.profileImgContainer {
+  .cover-img {
+    height: 60vh;
+    width: 100%;
+    background: url("../Component/HomeScreen/PostsData/postImg.jpg");
+    background-size: cover;
+    background-position: 0% 11%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    .editCoverPhotoContainer {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 30%;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.534),
+        rgba(0, 0, 0, 0.014)
+      );
+      .editCoverPhoto {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        .avatar,
+        .editcover {
+          color: whitesmoke;
+          background: rgba(0, 0, 0, 0.438);
+          width: 170px;
+          padding: 7px 10px;
+          border-radius: 5px;
+          margin-top: 8px;
+          text-align: center;
+          font-size: 14px;
+          i {
+            filter: invert(100%);
+          }
+        }
+      }
+    }
+  }
+  .profile {
+    align-items: flex-end;
+    height: 170px;
+    border-bottom: 1px solid rgb(206, 206, 206);
+    .profilecontent {
+      width: fit-content;
+      .mainImg {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 4px solid #ffffff;
+        position: relative;
+        transform: translateY(-32px);
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+        span {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          text-align: center;
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          line-height: 50px;
+          background: $hoverBackground;
+        }
+      }
+      .profileName {
+        h2 {
+          font-weight: 700;
+          font-size: 32px;
+        }
+        p {
+          color: $textlightblack;
+          font-weight: 500;
+        }
+        .friendsImg {
+          display: flex;
+          align-items: center;
+
+          span {
+            width: 38px;
+            height: 38px;
+            background: gray;
+            border-radius: 50%;
+            border: 2px solid white;
+            padding-right: 16px;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+    .edit {
+      .addStory,
+      .editProfile,
+      .down {
+        background: $textblue;
+        padding: 8px 12px;
+        border-radius: 8px;
+        color: white;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 6px;
+        }
+      }
+      .addStory {
+        margin-right: 10px;
+        img {
+          filter: invert(100%);
+        }
+      }
+      .editProfile,
+      .down {
+        background: $hoverBackground;
+        color: black;
+      }
+      .down {
+        padding: 10px 12px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .profileNav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .Icon {
+      text-decoration: none;
+      padding: 10px 10px;
+      text-align: center;
+      margin-left: 10px;
+      color: $textlightblack;
+      font-weight: 500;
+      &:hover {
+        border-radius: 10px;
+        background: $hoverBackground;
+      }
+      &:nth-child(1) {
+        border-bottom: 3px solid $textblue;
+        border-radius: 0px;
+        background: none;
+        color: $textblue;
+      }
+    }
+  }
+}
+@media (max-width: 1209px) {
+  .profileImgContainer {
+    .profile {
+      height: auto !important;
+    }
+    .profileNav {
+      height: auto;
+      background: white;
+    }
+  }
+}
+@media (max-width: 567px) {
+  .profileImgContainer {
+    .cover-img {
+      height: 30vh;
+    }
+  }
+}

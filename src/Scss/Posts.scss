@@ -1,0 +1,75 @@
+.postData {
+  margin: auto;
+  box-shadow: 0 1px 3px 0 var(--shadow-1);
+  background: white;
+  border-radius: 10px;
+  .postHeader {
+    .profile {
+      .profileImg {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        overflow: hidden;
+        padding: 2px;
+        border: 2px solid rgb(207, 207, 207);
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+      .profileDetails {
+        opacity: 0.7;
+        margin-left: 10px;
+        .profileName {
+          font-size: 15px;
+          font-weight: 500;
+        }
+        > p {
+          font-size: 13px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+    .postCross{
+      svg,i{
+        margin-right:12px;
+        opacity: .6;
+      }
+    }
+  }
+  .postTitle{
+    color: $textblack;
+    padding: 8px 0px;
+  }
+  .postimg{
+    padding-bottom: 10px;
+    img{
+      width: 100%;
+    }
+  }
+  .postComments{
+    padding: 0px 6px;
+    .likeCommentsDetails{
+      opacity: .8;
+     span{
+          font-size: 14px;
+          margin-right: 4px;
+        }
+      border-bottom: .5px solid $hoverBackground;
+    }
+    .likeCommentShare{
+.like,.comment,.share{
+  i{
+  opacity: .8;
+
+  }
+  span{
+    color: $textlightblack;
+    font-size: 15px;
+    margin-left: 8px;
+  }
+}
+    }
+  }
+}
