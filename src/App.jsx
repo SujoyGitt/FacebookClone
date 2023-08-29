@@ -1,5 +1,4 @@
 import { Navbar } from "./Component/Navbar/Navbar";
-import { useState } from "react";
 import { Sidebar } from "./Component/Sidebar/Sidebar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SidebarRight from "./Component/SidebarRight/SidebarRight";
@@ -10,7 +9,6 @@ import Games from "./Component/Games/Games";
 import HomeScreen from "./Component/HomeScreen/HomeScreen";
 import Bookmarks from "./Pages/Bookmarks/Bookmarks";
 import ProfilePage from "./Pages/ProfilePage/ProfilePage";
-import { useEffect } from "react";
 const Layout = ({ children}) => {
  
   return (
@@ -30,6 +28,15 @@ const App = () => {
     <div className="app">
       <BrowserRouter>
         <Routes>
+          <Route
+            path="/FacebookClone"
+            exact
+            element={
+              <Layout>
+                <HomeScreen />
+              </Layout>
+            }
+          />
           <Route
             path="/"
             exact
